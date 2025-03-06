@@ -5,6 +5,11 @@ Used to get Product Information and HTSUS
 
 This guide outlines the steps to register as a developer and begin using the DigiKey API.
 
+
+See Getting Start
+![alt text](images/gettingstart.png)
+
+
 ### Step 1: Register or Login to My DigiKey
 
 *   Log in with your existing "My DigiKey" account credentials to create a developer account.
