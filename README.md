@@ -1,6 +1,13 @@
 # DigikeyAPI
 Used to get Product Information and HTSUS
 
+## Usage
+```
+python digikey.py --client_id NevulB6rDGslr6WIKI744bSrTvVfPess --client_secret 6mxXMH1rHFH7OYT8
+Do you want to search by (1) Product Number or (2) Keyword? 2
+Enter the keyword to search: 1N5822
+```
+
 ## Get Started with DigiKey API: A Developer Registration Guide
 
 This guide outlines the steps to register as a developer and begin using the DigiKey API.
