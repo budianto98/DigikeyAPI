@@ -6,6 +6,7 @@
 import requests
 import time
 import json
+import argparse
 
 remove_duplicates = lambda lst: list(dict.fromkeys(lst))
 
@@ -143,10 +144,13 @@ class DigiKeyAPI:
 
 
 if __name__ == "__main__":
-    CLIENT_ID = "[CLIENT_ID]"           # Replace with your actual client ID
-    CLIENT_SECRET = "[CLIENT_SECRET]"   # Replace with your actual client secret
 
-    api = DigiKeyAPI(CLIENT_ID, CLIENT_SECRET)
+    parser = argparse.ArgumentParser(description="Interact with the Digi-Key API.")
+    parser.add_argument("--client_id", help="Your Digi-Key API client ID", type=str, required=True)
+    parser.add_argument("--client_secret", help="Your Digi-Key API client secret")
+    args = parser.parse_args()
+
+    api = DigiKeyAPI(args.client_id, args.client_secret)
 
     action = input("Do you want to search by (1) Product Number or (2) Keyword? ")
 
@@ -162,7 +166,6 @@ if __name__ == "__main__":
         results = api.search_by_keyword(keyword)
         if results:
             print("Search results found:")
-            # print(results)
             extractHST = api.extractHST()
             print(extractHST)
 
